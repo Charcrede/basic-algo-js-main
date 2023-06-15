@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitalize</title>
+    <script>
+        function titleCase(str) {
+           str = str.split(" ")
+           for (let i = 0; i < str.length; i++) {
+                str[i] = str[i].toLowerCase();
+                str[i] = str[i].split("")
+                str[i][0] = str[i][0].toUpperCase();  
+                str[i] = str[i].join("")
+            }
+            let result = str.join(" ");
+            return result;        
+        }
+        console.log(titleCase("HERE IS MY HANDLE HERE IS MY SPOUTt"));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

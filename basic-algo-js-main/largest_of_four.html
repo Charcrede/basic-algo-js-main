@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Largest of four</title>
+    <script>
+        let Tab = [];
+        let number = Number(prompt("combien de tableau"));
+        for (let u = 0; u < number; u++) { 
+            let num = Number(prompt("combien d'élément dans votre tableau" + " " + (Number(u) + 1)));
+            let littleTab = [];
+            for (let i = 0; i < num; i++) {
+                littleTab.push(Number(prompt("veuillez écrire")));
+            }
+            Tab.push(littleTab)
+        }
+        
+        function largestOfFour(arr) {
+            let finalTab = [];
+            for (let i = 0; i < arr.length; i++) {
+                let grand = arr[i][0];
+                for (let y = 0; y < arr[i].length; y++) {
+                    if (grand  < arr[i][y]) {
+                        grand = arr[i][y];
+                    }
+                }
+                finalTab.push(grand)
+            }
+            return finalTab;
+        }
+
+        console.log(Tab);
+        console.log(largestOfFour(Tab));
+        
+        
+        
+        
+        
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

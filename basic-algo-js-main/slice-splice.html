@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slice splice</title>
+    <script>
+      let index = 3; 
+      let tab1 = [1, 2, 3] ; 
+      let tab2 = [4, 5, 6, 5, 8, 9, 8]; 
+        function frankenSplice(arr1, arr2, n) {
+          let result = arr2.slice();
+          for (let i = arr1.length-1; i >= 0; i--) {
+              result.splice(n, 0, arr1[i]);
+          }
+          return result;
+      }
+        console.log(frankenSplice(tab1, tab2, 3));
+        console.log(tab1);
+        console.log(tab2);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
